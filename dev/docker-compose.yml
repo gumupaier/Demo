@@ -27,7 +27,7 @@ services:
       MYSQL_PASSWORD: "root"
       MYSQL_ROOT_PASSWORD: "root"
       MYSQL_DATABASE: work_attendance
-      PMA_HOST: test-mysql
+      PMA_HOST: db
     networks:
       - net-mysql
 
