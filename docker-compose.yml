@@ -1,0 +1,23 @@
+version: '2'
+services:
+  work-attendance-server:
+#    ports:
+#      - 7890:7890
+    build: .
+    environment:
+      - DB_HOST=db
+      - DB_NAME=work_attendance
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DEBUG=True
+    volumes:
+      - .:/work
+    working_dir: /work
+#    command:
+    networks:
+      - net-mysql
+
+
+networks:
+  net-mysql:
+    external: true
